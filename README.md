@@ -6,9 +6,8 @@ Python 3.9
 
 ## Setup db
 
-Run these commands to create tables in the database:
+Run this commands to create tables in the database:
 
-    python manage.py makemigrations
     python manage.py migrate
 
 ## Create a super user
@@ -17,7 +16,7 @@ You need a user to access the information in the system.
 
 Run this command and follow the short setup
 
-    python manage.py createsuperuser
+    python manage.py createsuperuser --username admin --email admin@gmail.com --password admin
 
 ## Launch the app
 
