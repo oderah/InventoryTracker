@@ -2,31 +2,13 @@
 
 ## Prerequisites
 
-Docker
-
 Python 3.9
 
-## Setup python environment
+## Setup db
 
-Run the following commands:
+Run these commands to create tables in the database:
 
-    pipenv shell
-    pipenv install
-
-## Setup postgres
-
-Run the following commands:
-
-    docker run --name inventory -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
-    docker exec -it inventory psql -U postgres -c "create database inventory"
-    docker exec -it inventory psql -U postgres inventory -c "GRANT ALL PRIVILEGES ON DATABASE inventory TO postgres"
-
-Change the database connection settings in tracker/settings.py
-
-    change NAME, USER, and PASSWORD to match your database info
-
-Run this command to create tables in the database:
-
+    python manage.py makemigrations
     python manage.py migrate
 
 ## Create a super user
@@ -43,7 +25,7 @@ To launch the app, run:
 
     python manage.py runserver
 
-Sign in to the app using the created super user at http://127.0.0.1:8000/admin/
+Sign in to the app using the created super user at http://127.0.0.1:8000/
 
 Congratulations! You have access to the inventory items and warehouses.
 
