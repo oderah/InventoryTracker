@@ -25,7 +25,11 @@ SECRET_KEY = '#o0s71fmt=_i=92)=)_fjw$hp0f(v263jdto&_djbgi%$zoj*8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = [
+  'https://*.127.0.0.1',
+  'https://*.0.0.0.0'
+]
 
 
 # Application definition
@@ -72,7 +76,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tracker.wsgi.application'
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
     ],
