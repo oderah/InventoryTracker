@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = [
+  'https://*.inventorytracker.oderah.repl.co',
   'https://*.127.0.0.1',
   'https://*.0.0.0.0'
 ]
