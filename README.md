@@ -7,8 +7,9 @@ Python 3.9
 ## Running the app on Replit
 
     click the run button
-    enter username and password for the new user.
-    sign in with the created user
+    sign in with:
+      username: admin
+      password: password
     success! You can now CRUD items and warehouses.
 
 ## Setup db
