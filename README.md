@@ -6,6 +6,20 @@ Python 3.9
 
 ## Running the app on Replit
 
+### Creating a new repl
+
+    select `python3` as the langauge
+    replace `run` in `.repl` with:
+
+    run = """
+    python manage.py migrate --no-input;
+    echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('admin', 'admin@myproject.com', 'password')" | python manage.py 
+    shell;
+    python manage.py runserver 0.0.0.0:3000;
+    """
+
+### loading the app
+
     click the run button
     go to /dashboard to access Django's default UI
     sign in with:
@@ -13,7 +27,7 @@ Python 3.9
       password: password
     success! You can now CRUD items and warehouses.
 
-## Running the app on Replit
+## Running the app outside Replit
 
 ### Setup db
 
